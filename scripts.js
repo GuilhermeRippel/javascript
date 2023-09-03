@@ -120,3 +120,18 @@ do{
 } while(j < 5){
 
 }
+
+
+//Data e hora
+const agora = Date();
+console.log(agora);
+
+const natal = new Date(2023, 11, 25);
+console.log(natal);
+
+//Math
+console.log(Math.PI);
+
+console.log(Math.round(3,6));
+
+conole.log(Math.sqrt(16));

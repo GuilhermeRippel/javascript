@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estudo JavaScript</title>
     <style>
         body{
             background-color: aqua;
@@ -17,13 +17,25 @@
     </style>
 </head>
 <body>
-    <h1>Aprendendo a usar DOM</h1>
+    <h1 id="titulo">Aprendendo a usar DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div>Clique em mim</div>
 
     <script>
-        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        window.document.write('Está escrito assim: ' + p1.innerText) //innerHTML puxa a formatação tambem das tags
+
+        var t = window.document.getElementById('titulo')
+        t.style.background = 'black'
+        t.innerText = 'Esse é o título'
+
+        //Essas seleções podem ser feitas por name, class, id, tag...
+
+        //Seletor faz seleção atravez de css
+        var d = window.document.querySelector('h1.titulo')
+        d.style.background = 'blue'
     </script>
 </body>
 </html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 3em;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+        }
+
+        section{
+            background-color: white;
+            width: 400px;
+            border-radius: 7px;
+            padding: 4px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input#inicio, #fim, #passo{
+            margin-top: 4px;
+            width: 200px;
+        }
+
+        footer{
+            text-align: center;
+            color: white;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: white;
+            text-decoration: underline;
+        }
+
+        a:hover{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <label for="inicio">Início: </label><input type="number" name="inicio" id="inicio">
+                <label for="fim">Fim: </label><input type="number" name="fim" id="fim">
+                <label for="passo">Passo: </label><input type="number" name="passo" id="passo">
+                <input type="button" value="Contar" onclick="contar()">
+            </div>
+            <div>
+                <p>Contando:</p>
+                <p id="res"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://GitHub.com/GuilhermeRippel">Guilherme</a> para praticar JavaScript</p>
+    </footer>
+
+    <script>
+        function contar(){
+                let inicio = document.getElementById('inicio')
+                let fim = document.getElementById('fim')
+                let passo = document.getElementById('passo')
+                let res = document.getElementById('res')
+                if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+                    window.alert('Erro faltam dados')
+                } else {
+                    let i = Number(inicio.value)
+                    let f = Number(fim.value)
+                    let p = Number(passo.value)
+                    if(p <= 0){
+                        window.alert('Passo inválido! Considerando passo = 1')
+                        p = 1
+                    }
+                    if(i < f){
+                        //contagem crescente
+                        res.innerHTML = ''
+                    for(var c = i; c <= f; c += p){ 
+                        res.innerHTML += ` ${c} \u{1F449} `
+
+                    } res.innerHTML += `\u{1F3C1}`
+                    //contagem descrescente
+                }else { 
+                    res.innerHTML = ''
+                    for(var c = i; c >= f; c -= p){ 
+                        res.innerHTML += ` ${c} \u{1F449} `
+                        
+                    } res.innerHTML += `\u{1F3C1}`
+                    
+                }
+                } 
+
+
+
+
+                //let res = window.document.getElementById('res')
+            //for(inicio.value === inicio.value; inicio.value != fim.value; inicio.value + passo.value){
+                //res.innerHTML = `${inicio}  |  `
+            //}
+        }
+    </script>
+</body>
+</html>

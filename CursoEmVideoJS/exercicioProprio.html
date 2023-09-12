@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 255, 255);
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        main{
+            width: 70vh;
+            background-color: white;
+            padding: 5px;
+            margin: auto;
+            text-align: center;
+            border-radius: 7px 7px 0px 0px;
+            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.596);
+        }
+
+        div{
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        div input#num1, #num2{
+            width: 120px;
+        }
+
+        footer{
+            padding: 1px;
+            margin: auto;
+            text-align: center;
+            background-color: rgb(1, 153, 153);
+            width: 70vh;
+            border-radius: 0px 0px 7px 7px;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover{
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+            padding: 3.5px;
+            transition-duration: 0.7s;
+        }
+    </style>
+    <title>Cálculos</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos Calcular</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <input type="number" name="num1" id="num1">
+                <input type="number" name="num2" id="num2">
+            </div>
+            <div>
+                <input type="button" value="Somar" onclick="somar()">
+                <input type="button" value="Subtrair" onclick="subtrair()">
+                <input type="button" value="Multiplicar" onclick="multiplicar()">
+                <input type="button" value="Dividir" onclick="dividir()">
+            </div>
+            <div id="res">
+                <p>Resultado:</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://GitHub.com/GuilhermeRippel" target="_blank">Guilherme Rippel</a> para estudos de JavaScript</p>
+    </footer>
+
+    <script>
+        var num1 = document.getElementById('num1')
+        var num2 = document.getElementById('num2')
+        var res = document.getElementById('res')
+
+        function somar(){
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
+            if(n1 == 0 || n2 == 0){
+                window.alert('Digite um valor')
+            } else {
+                let resultado = n1 + n2
+                res.innerHTML = `Resultado da soma = ${resultado}`
+            }
+        }
+
+        function subtrair(){
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
+            if(n1 == 0 || n2 == 0){
+                window.alert('Digite um valor')
+            } else {
+                let resultado = n1 - n2
+                res.innerHTML = `Resultado da subtração= ${resultado}`
+            }
+        }
+
+        function multiplicar(){
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
+            if(n1 == 0 || n2 == 0){
+                window.alert('Digite um valor')
+            } else {
+                let resultado = n1 * n2
+                res.innerHTML = `Resultado  da multiplicação = ${resultado}`
+            }
+        }
+
+        function dividir(){
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
+            if(n1 == 0 || n2 == 0){
+                window.alert('Digite um valor')
+            } else {
+                let resultado = n1 / n2
+                res.innerHTML = `Resultado da divisão = ${resultado}`
+            }
+        }
+
+    </script>
+</body>
+</html>

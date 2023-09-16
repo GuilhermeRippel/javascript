@@ -5,49 +5,20 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header h1{
-    text-align: center;
-    font-size: 2.5em;
+h1{
     color: white;
-}
-
-main{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 section{
-    width: 500px;
     background-color: white;
     padding: 5px;
     border-radius: 7px;
-}
-
-section div#cima{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-section div#baixo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-footer{
-    text-align: center;
+    width: 70vh;
+    margin: auto;
 }
 
 footer p, a{
     color: white;
-    text-decoration: none;
-}
-
-footer a:hover{
-    color: black;
-    background-color: white;
-    border-radius: 30px;
-    padding: 7px;
+    text-align: center;
 }

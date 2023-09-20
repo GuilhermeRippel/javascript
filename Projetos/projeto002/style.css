@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+body{
+    background-color: bisque;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+section#superior{
+    border-radius: 5px 5px 0px 0px;
+    width: 550px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    padding: 3px;
+}
+
+section#superior input{
+    width: 250px;
+    border: 0px;
+    box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.158);
+    padding: 4px;
+}
+
+section#superior nav input[value = "Adicionar"],
+section#superior nav input[value = "limpar"]{
+    width: 70px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+section#superior nav input[value = "Adicionar"]:hover,
+section#superior nav input[value = "limpar"]:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    font-size: 13px;
+}
+
+
+section#inferior{
+    width: 550px;
+    height: 200px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    padding: 3px;
+    border-radius: 0px 0px 5px 5px;
+}

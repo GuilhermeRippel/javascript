@@ -1,53 +1,114 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Passion+One&display=swap');
+
 
 body{
-    background-color: bisque;
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray !important;
+    font-family: 'Mooli', sans-serif !important;
 }
 
 h1{
     text-align: center;
+    font-weight: bolder !important;
 }
 
-section#superior{
-    border-radius: 5px 5px 0px 0px;
-    width: 550px;
-    background-color: white;
+
+main{
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
     margin: auto;
-    text-align: center;
-    padding: 3px;
-}
-
-section#superior input{
-    width: 250px;
-    border: 0px;
-    box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.158);
-    padding: 4px;
-}
-
-section#superior nav input[value = "Adicionar"],
-section#superior nav input[value = "limpar"]{
-    width: 70px;
     padding: 5px;
-    border-radius: 15px;
+    margin-top: 50px;
+    background-color: white;
+    width: 500px;
+    border-radius: 7px;
 }
 
-section#superior nav input[value = "Adicionar"]:hover,
-section#superior nav input[value = "limpar"]:hover{
-    transition-duration: 0.5s;
-    background-color: white;
-    font-size: 13px;
+nav{
+    display: flex !important;
+    flex-direction: row;
+    margin-bottom: 5px;
 }
 
+main nav input{
+    width: 380px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    margin-right: 4px;
+}
 
-section#inferior{
-    width: 550px;
-    height: 200px;
-    background-color: white;
-    margin: auto;
-    text-align: center;
+ul{
+    padding: 0px;
+}
+
+#res li {
+    background-color: rgba(0, 0, 0, 0.685);
+    font-size: 19px;
+    margin-bottom: 5px;
     padding: 3px;
-    border-radius: 0px 0px 5px 5px;
+    color: white;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.514);
+}
+
+#res li:hover {
+    background-color: black;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#res li:not(:hover){
+    background-color: rgba(0, 0, 0, 0.685);
+    transition-duration: 0.5s;
+}
+
+button.editar{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 4.5px;
+    cursor: pointer;
+}
+
+button.editar:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition-duration: 0.7s;
+    border: 1px solid white;
+}
+
+button.editar:not(:hover){
+    background-color: rgb(153, 153, 153);
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 4.5px;
+    transition-duration: 0.7s;
+}
+
+button.fa-solid{
+    height: 39px;
+    background-color: rgb(153, 153, 153);
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 4.5px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+button.fa-solid:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition-duration: 0.7s;
+    border: 1px solid white;
+}
+
+button.fa-solid:not(:hover){
+    height: 39px;
+    background-color: rgb(153, 153, 153);
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 4.5px;
+    cursor: pointer;
+    transition-duration: 0.7s;
 }

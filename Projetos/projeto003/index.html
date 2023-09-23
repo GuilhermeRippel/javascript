@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista atualizado</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Listas</h1>
+    </header>
+    <main>
+        <div>
+            <nav id="esquerda">
+                <input type="button" value="Home">
+                <input type="button" value="GitHub">
+                <input type="button" value="Tema">
+                <input type="button" value="Favoritos">
+            </nav>
+            <nav id="conteudo">
+                <nav id="barraPesquisa">
+                <label for="texto">TAREFA:</label><input type="text" id="texto">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+                <input type="button" value="Limpar" onclick="limpar()">
+                </nav>
+                <ul id="res">
+
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

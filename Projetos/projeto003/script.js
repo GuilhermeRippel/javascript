@@ -25,9 +25,6 @@ function adicionar(){
     texto.value = ''
 }
 
-
-
-
 function limpar(){
     res.innerHTML = ''
 }
